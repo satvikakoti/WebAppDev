@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<title>Shoping Cart in CSS</title>
+	<style type="text/css">
+	.shopping_cart{
+		position: relative;
+		word-spacing: -1em;
+		width: 100px;
+		text-align: center;
+	}
+
+	.shopping_cart span{
+		display: inline-block;
+	}
+
+	.top{
+		display: inline-block;
+		text-align: center;
+		background-color: #d20000;
+		width: 80px;
+	}
+
+	.before_arrow{
+		margin-right: -15px;
+		border-top: 40px solid white;
+		border-right: 25px solid transparent;
+	}
+
+	.arrow_up{
+		width: 10px;
+		border-bottom: 40px solid white;
+		border-left: 25px solid transparent;
+		border-right: 25px solid transparent;
+	}
+
+	.after_arrow{
+		margin-left: -15px;
+		border-top: 40px solid white;
+		border-left: 25px solid transparent;
+	}
+
+	.box{
+		background-color: #c40066;
+		height: 50px;
+		width: 60px;
+	}
+
+	.before_box{
+		border-width: 0px;
+		background-color: transparent;
+		border-top: 50px solid #c40066;
+		border-left: 20px solid transparent;
+
+	}
+
+	.after_box{
+		background-color: transparent;
+		border-top: 50px solid #c40066;
+		border-right: 20px solid transparent;
+	}
+	</style>
+</head>
+<body>
+
+<div class="shopping_cart">
+	<div class="top"><span class="before_arrow"></span><span class="arrow_up"></span><span class="after_arrow"></span></div>
+	<div class="bottom"><span class="before_box"></span><span class="box"></span><span class="after_box"></span></div>
+</div>
+
+<div style="margin-top: 30px;">Tested With: Firefox 12, Opera 11.64, Chrome 19, IE 9, IE 8</div>
+
+</body>
+</html>
