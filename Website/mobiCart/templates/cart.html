@@ -1,0 +1,186 @@
+{% load static %}
+
+<html>
+<head>
+    <script language="JavaScript" src="{% static 'cart_new.js' %}"></script>
+    <!--script>
+        var total=0;
+var items=["airpods","airpodspro","bspeakers","covers"];
+var itemcount=[0,0,0,0];
+var itemprice=[18900.0,24900.0]
+function cartload()
+{
+    if(total==0)
+    {
+
+        document.getElementById("tot").innerHTML="Total items in cart:0";
+        var row=document.getElementById("mytable").insertRow(-1);
+        var cell1=row.insertCell(0);
+        var cell2=row.insertCell(1);
+        var cell3=row.insertCell(2);
+        var cell4=row.insertCell(3);
+        cell1.innerHTML="None";
+        cell2.innerHTML=0.0;
+        cell3.innerHTML=0;
+        cell4.innerHTML=0.0;
+    }
+}
+function addcart(item)
+{
+
+
+    if(item==items[0])
+    {
+        itemcount[0]++;
+        total++;
+        document.getElementById("tot").innerHTML="Total items in cart:"+total;
+        var row=document.getElementById("mytable").insertRow(-1);
+        var cell1=row.insertCell(0);
+        var cell2=row.insertCell(1);
+        var cell3=row.insertCell(2);
+        var cell4=row.insertCell(3);
+        cell1.innerHTML=items[0];
+        cell2.innerHTML=itemprice[0];
+        cell3.innerHTML=itemcount[0];
+        cell4.innerHTML=itemcount[0]*itemprice[0];
+
+
+    }
+    else if(item==items[1])
+    {
+        itemcount[1]++;
+        total++;
+        document.getElementById("tot").innerHTML="Total items in cart:"+total;
+        var row=document.getElementById("mytable").insertRow(-1);
+        var cell1=row.insertCell(0);
+        var cell2=row.insertCell(1);
+        var cell3=row.insertCell(2);
+        var cell4=row.insertCell(3);
+        cell1.innerHTML=items[1];
+        cell2.innerHTML=itemprice[1];
+        cell3.innerHTML=itemcount[1];
+        cell4.innerHTML=itemcount[1]*itemprice[1];
+
+
+    }
+}
+function deleteItem()
+{
+}
+cartload();
+    </script-->
+    <style>
+        .club button
+{
+    background-color:lightblue;
+    box-sizing: border-box;
+    border: 1px solid darkblue;
+    height:30px;
+    width:300px;
+    padding: center;
+    float: center;
+  text-decoration:none;
+  cursor: pointer;
+}
+        .products-container {
+    max-width: 650px;
+    /*justify-content: space-around;*/
+    margin:0 auto;
+    margin:50px;
+    /*display:flex;*/
+    justify-content: center;
+    flex-wrap: wrap;
+    padding-bottom: 100px;
+    margin-top: 50px;
+            /*background-color: bisque;*/
+}
+   /* .product-header {
+    font-family: "Sans-serif";
+    font-weight: normal;
+    color: black;
+    text-align: center;
+    font-size: 2.5em;
+}*/
+.product-header{
+    width:50%;
+    max-width: 650px;
+    display: flex;
+    justify-content: flex-start;
+    border: 4px black;
+    margin:  auto;
+    /*background-color: lightcoral;*/
+}
+
+.product-title{
+    width:45%;
+}
+
+.price{
+    width:35%;
+    border: 4px black;
+    display: flex;
+    align-items: center;
+}
+.quantity{
+        width:30%;    
+}
+.total{
+    width: 30%;
+    border: 1px solid light gray;
+    display: flex;
+    align-items: center;
+}
+.remove button{
+    background-color: brown;
+    font-style: oblique;
+    color: white;
+}
+#del
+{
+ background-color:pink;
+ width:20%;
+}
+</style>
+</head>
+    <body bgcolor="lightsteelblue">
+    <table width="100%"  align="left">
+        <tr >
+            <th width="45%" height="20%">
+            <img src="{% static 'mainlogoimg.png' %}" width="20%" height="20%" align="left">
+                </th>
+            <th align="left"><h1>MY CART PAGE</h1></th>
+        </tr>
+    </table>
+    <br>
+    <table width="100%">
+        
+        <td align="left">
+            <div class="club"><button type="button" onclick=window.open("{% url 'userhome' %}","_self")><b><i>Go Back to Home Page</i></b></button></div>
+                 <div class="addtocart"><button onclick="addcart('airpodspro')"><b>Add to Cart</b></button>
+            <!--div class="addtocart"><button onclick="myCreateFunction()"><b>Add to Cart</b></button-->
+        </div></td>
+    </table>
+    <div id="tot"><h3></h3></div>
+    <table width="50%" border="5px" bordercolor="lightgray" align="center" id="mytable">
+        <tr>
+    <div class="products-container">
+        <div class="product-header">
+            <th><h4 class="product-title">PRODUCT</h4></th>
+            <th><h4 class="price">PRICE</h4></th>
+            <th><h4 class="quantity">QUANTITY</h4></th>
+            <th><h4 class="total">SUBTOTAL</h4></th>
+        </div>
+            </div>
+            </tr>
+        <!--tr>
+            <div class="products">
+                <th><h4 class="product-title" id="prodtitle"></h4></th>
+            <th><h2 id="prodtitle"></h2><br></th>
+            <th><h4 class="price" id="prodprice"></h4></th>
+            <th><input type="number"  value="1" class="quantity" id="prodcount" min="1"><input type="button" value="Delete" id="del" onclick="deleteItem()"></th>
+            <th><h4 class="total" id="prodtotal"></h4></th>
+            </div>
+        </tr-->
+        </table>
+    </body>
+</html>

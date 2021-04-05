@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
     <head> <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
@@ -6,7 +8,7 @@
        #backgroundimg{
   background-image:url(bkgroundimg2.png)
   background-repeat: no-repeat;
-  background-size: 90%;
+  background-size: 100%;
   /*background-position: top;
  background: rgba(0,0,0,0.2);*/
 }
@@ -150,13 +152,17 @@ input[type=text] {
 
 </style>
 
-<body background="bkgroundimg2.png" id="backgroundimg" ></body>
-<table width="100%">
+<body background="{% static 'bkgroundimg2.png' %}" id="backgroundimg" ></body>
+
+        <!--div align="left"><img src="{% static 'sitename.PNG' %}" width="40%" height="20%"></div>
+        <div align="right"><img src="{% static 'mainlogoimg.png' %}" width="20%" height="30%"></div-->
+
+<table  width="100%" height="40%">
     <tr align=left>
-        <th><img src="sitename.PNG">
-        </th>
-        <th align="right"><img src="mainlogoimg.png" width="20%" height="20%">
-        </th>
+        <td><img src="{% static 'sitename.PNG' %}" >
+        </td>
+        <td align="right"><img src="{% static 'mainlogoimg.png' %}" width="20%" height="20%">
+        </td>
     </tr>
 </table>
 <br><br>
@@ -170,7 +176,7 @@ input[type=text] {
         </td>
         <td align="center" width="30%">
             <div class="club1">
-            <button type="button"><i class="fa fa-shopping-cart" style="font-size:36px"></i></button><b>MY CART</b>
+            <button type="button" onclick=window.open("{% url 'cart' %}","_self")><i class="fa fa-shopping-cart" style="font-size:36px"></i></button><b>MY CART</b>
                 </div>
         </td>
     </tr>
@@ -182,7 +188,7 @@ input[type=text] {
         <div class="dropdown">
   <button class="dropbtn">TODAY'S DEALS</button>
   <div class="dropdown-content">
-  <a href="airpods.html">Apple Air Pods</a>
+  <a href="{% url 'airpods' %}">Apple Air Pods</a>
   <a href="#">Wireless Charging Stations</a>
   <a href="#">Screen Protectors</a>
     <a href="#">Portable Bluetooth Speakers</a>
@@ -250,8 +256,8 @@ input[type=text] {
         <th><div class="dropdown">
   <button class="dropbtn">LOGIN/SIGN UP</button>
   <div class="dropdown-content">
-  <a href="Login.html">Login</a>
-  <a href="registrationpage.html">Sign Up</a>
+  <a href="{% url 'loginpage' %}">Login</a>
+  <a href="{% url 'registerpage' %}">Sign Up</a>
   </div>
 </div>
 
@@ -259,15 +265,15 @@ input[type=text] {
     </table>
     <br>
 <table width="50%" height="50%" align="left">
-    <tr><td><img src="leftslide2.png" width="40%" height="50%"></td></tr>
-    <tr><td><img src="leftslide3.png" width="40%" height="50%"></td></tr>
-    <tr><td><img src="leftslide4.png" width="40%" height="50%"></td></tr>
-    <tr><td><img src="leftslide1.png" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide2.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide3.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide4.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide1.png' %}" width="40%" height="50%"></td></tr>
 </table>
 <table width="50%" height="20%" align="right">
-    <tr><td align="right"><img src="Ani_Mobi_items.gif" width="55%" height="80%" border="5" ><br><br><br>
+    <tr><td align="right"><img src="{% static 'Ani_Mobi_items.gif' %}" width="55%" height="80%" border="5" ><br><br><br>
     </td></tr>
-    <tr><td><img src="mobileincart.jpg" width="25%" height="20%" align="right"></td></tr>
+    <tr><td><img src="{% static 'mobileincart.jpg' %}" width="25%" height="20%" align="right"></td></tr>
 </table><br><br>
 
 </html>

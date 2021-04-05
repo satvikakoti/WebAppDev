@@ -21,8 +21,13 @@ from mobiCart import views
 urlpatterns = [
     path('admin/', admin.site.urls),
     #path('', include('polls.urls')),
-    path('home/',views.first),
-    path('first/',views.data),
-
+    path('', views.homepage,name="homepage"),
+    path('register/',views.register,name="registerpage"),
+    path('login/', views.userlogin,name="loginpage"),
+    path('user/', views.userhome, name='userhome'),
+    path('airpods/', views.airpods, name='airpods'),
+    path('cartpage/', views.cart, name='cart'),
+    # path('', views.showvideo, name='video'),
+    #path('test/',views.airpodsHome, name='back'),
 
 ]

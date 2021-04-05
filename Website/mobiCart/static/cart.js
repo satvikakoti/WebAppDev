@@ -116,4 +116,4 @@ function displayCart()
             
        */ }
 }
-displayCart();
+//displayCart();

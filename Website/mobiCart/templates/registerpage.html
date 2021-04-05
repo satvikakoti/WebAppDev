@@ -1,3 +1,5 @@
+{% load static %}
+
 <html>
     <!--script src="registerval.js"></script-->
     <script language="JavaScript" >
@@ -97,15 +99,15 @@
 
 <body background id="backgroundimg"></body>
 <table align="center" border="0" width="100%" height="20%">
-    <tr><td align="left" width="40%"><img src="mainlogoimg.png" width="20%" height="20%"></td>
+    <tr><td align="left" width="40%"><img src="{% static 'mainlogoimg.png' %}" width="20%" height="20%"></td>
         <td align="left" width="60%"><h1>REGISTRATION PAGE</h1></td></tr>
 </table>
 <table align="center" border="5" cellpadding="10" cellspacing="10" width="35%" bgcolor="lightcyan" height="100%" bordercolor="darkcyan">
     <tr><td><b>First Name:</b>
-    <input type="text" name="Firstname"></td></tr>
+    <input type="text" name="firstname"></td></tr>
     <br>
     <tr><td><b>Last Name:</b>
-    <input type="text" name="Lastname"></td></tr><br>
+    <input type="text" name="lastname"></td></tr><br>
     <tr><td><b>Gender:</b>
     <input type="radio" name="sex" value="male">Male
         <input type="radio" name="sex" value="female">Female</td>
@@ -252,7 +254,7 @@ Year
     <tr><td><input type="checkbox" name="T&C" value="t&c" required><b><i>I agree with the Terms and Conditions</i></b></td></tr>
     <br>
     <tr>
-        <td align="center"><input type="button" value="Submit" id="submitbtn" onClick="validateEmail(this.form)">
+        <td align="center"><input type="submit" value="Submit" id="submitbtn" onClick="validateEmail(this.form)">
         <input type="reset" onclick="none" value="Cancel" id="submitbtn"></td>
     </tr>
     </table>

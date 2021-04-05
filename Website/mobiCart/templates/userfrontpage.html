@@ -1,0 +1,277 @@
+{% load static %}
+
+<html>
+    <head> <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"></head>
+   <style>
+
+       #backgroundimg{
+  background-image:url(bkgroundimg2.png)
+  background-repeat: no-repeat;
+  background-size: 90%;
+  /*background-position: top;
+ background: rgba(0,0,0,0.2);*/
+}
+    #icon
+    {
+width: 26px;
+height: 26px;
+font-size: 20px;
+border:10px;
+border-color:chocolate;
+box-sizing: border-box;
+/*background: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHg9IjBweCIgeT0iMHB4Igp3aWR0aD0iNTAiIGhlaWdodD0iNTAiCnZpZXdCb3g9IjAgMCA1MCA1MCIKc3R5bGU9IiBmaWxsOiMwMDAwMDA7Ij48cGF0aCBkPSJNIDIxIDMgQyAxMS42MjEwOTQgMyA0IDEwLjYyMTA5NCA0IDIwIEMgNCAyOS4zNzg5MDYgMTEuNjIxMDk0IDM3IDIxIDM3IEMgMjQuNzEwOTM4IDM3IDI4LjE0MDYyNSAzNS44MDQ2ODggMzAuOTM3NSAzMy43ODEyNSBMIDQ0LjA5Mzc1IDQ2LjkwNjI1IEwgNDYuOTA2MjUgNDQuMDkzNzUgTCAzMy45MDYyNSAzMS4wNjI1IEMgMzYuNDYwOTM4IDI4LjA4NTkzOCAzOCAyNC4yMjI2NTYgMzggMjAgQyAzOCAxMC42MjEwOTQgMzAuMzc4OTA2IDMgMjEgMyBaIE0gMjEgNSBDIDI5LjI5Njg3NSA1IDM2IDExLjcwMzEyNSAzNiAyMCBDIDM2IDI4LjI5Njg3NSAyOS4yOTY4NzUgMzUgMjEgMzUgQyAxMi43MDMxMjUgMzUgNiAyOC4yOTY4NzUgNiAyMCBDIDYgMTEuNzAzMTI1IDEyLjcwMzEyNSA1IDIxIDUgWiI+PC9wYXRoPjwvc3ZnPg==') 50% 50% no-repeat;*/
+background-size: 100%;
+
+          }
+.club button
+{
+    background-color:coral;
+    box-sizing: border-box;
+    border: 1px solid chocolate;
+    width:31px;
+    height: 31px;
+    font-size: 20px;
+    padding: center;
+    float: center;
+  text-decoration:none;
+  cursor: pointer;
+    /*float: left;
+        width: 10%;
+        padding: 10px;
+        background: white;
+        color: black;
+        font-size: 17px;
+        border: 1px solid grey;
+        border-left: none;
+        cursor: pointer;*/
+}
+.club1 button
+       {
+           background-color:coral;
+    box-sizing: border-box;
+    border: 1px solid chocolate;
+    width:60px;
+    height: 60px;
+    padding: center;
+    float: center;
+  text-decoration:none;
+  cursor: pointer;
+       }
+input[type=text] {
+    font-size: 20px;
+  width: 80%;
+  box-sizing:border-box;
+    border-style:solid;
+    background-color: bisque;
+}
+    .dropbtn {
+  background-color: darksalmon;
+  color: azure;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+    width: 100%;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: wheat;
+  min-width: 200px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+        .subdropdown {
+  position: relative;
+  display: inline-block;
+}
+       .subdropdown-content {
+  display: none;
+  position: absolute;
+  background-color: wheat;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+.subdropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+       .subdropbtn {
+  background-color: wheat;
+  color: black;
+  padding: 5px;
+  font-size: 15px;
+  border:2px black;
+            width=20px
+           height=20px
+  cursor: pointer;
+           position:relative;
+
+    width: 100%;
+}
+
+.dropdown-content a:hover {background-color: goldenrod}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.dropdown:hover .dropbtn {
+  background-color: darksalmon;
+       }
+
+
+
+.dropdown-content.subdropdown-content a:hover {background-color: goldenrod}
+
+.subdropdown:hover .subdropdown-content {
+  display: block;
+}
+
+.dropdown-content a:hover .subdropbtn:hover {
+  background-color: darksalmon;
+}
+
+</style>
+
+<body background="{% static 'bkgroundimg2.png' %}" id="backgroundimg" ></body>
+<table width="100%">
+    <tr align=left>
+        <th><img src="{% static 'sitename.PNG' %}">
+        </th>
+        <th align="right" width="30%"><h3>{{ msg }}</h3><!--h3>WELCOME {{msg}} TO mobiCart!!</h3-->
+        </th>
+        <th align="right"><img src="{% static 'mainlogoimg.png' %}" width="20%" height="20%">
+        </th>
+    </tr>
+</table>
+<br><br>
+    <table width="100%">
+    <tr>
+        <td width="60%" align="left" cellpadding="3" cellspacing="3">
+        <div class="club">
+            <input type="text" placeholder="Search..."><button type="button" onclick=window.open("https://www.amazon.in/","_self")>
+            <i class="fa fa-search"></i></button>
+            </div>
+        </td>
+        <td align="center" width="30%">
+            <div class="club1">
+            <button type="button" onclick=window.open("{% url 'cart' %}","_self")><i class="fa fa-shopping-cart" style="font-size:36px"></i></button><b>MY CART</b>
+                </div>
+        </td>
+    </tr>
+    </table>
+    <br><br>
+<table bordercolor="FFCC33" width="100%" bordersize="5" bgcolor="FFCC33" cellpadding="5" callspacing="5">
+    <tr>
+        <th>
+        <div class="dropdown">
+  <button class="dropbtn">TODAY'S DEALS</button>
+  <div class="dropdown-content">
+  <a href="{% url 'airpods'%}">Apple Air Pods</a>
+  <a href="#">Wireless Charging Stations</a>
+  <a href="#">Screen Protectors</a>
+    <a href="#">Portable Bluetooth Speakers</a>
+  <a href="#">Smart Home Assistant</a>
+  <a href="#">Zoom Lens</a>
+  </div>
+</div>
+        </th>
+        <th>
+        <div class="dropdown">
+  <button class="dropbtn">CATEGORY</button>
+  <div class="dropdown-content">
+  <br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>Mobile Deco's </b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Phone Covers and Cases</a>
+          <a href="#">Screen Protectors</a>
+      </div>
+          </div>
+ <br><br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>Headsets </b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Bluetooth Headsets</a>
+          <a href="#">Headsets</a>
+      </div>
+          </div>
+  <br><br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>Cables </b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Data/USB Cables</a>
+      </div>
+          </div>
+    <br><br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>External Software </b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Anti-lost Devices</a>
+          <a href="#">Mass Storage</a>
+      </div>
+          </div>
+  <br><br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>Photo Accessories</b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Selfie Sticks</a>
+          <a href="#">Phone Stands</a>
+          <a href="#">Smartphone Tripod mounts</a>
+      </div>
+          </div>
+  <br><br>
+      <div class="subdropdown">
+          <button class="subdropbtn" ><b>Batteries </b>&#x25B8;</button>
+      <div class="subdropdown-content">
+          <a href="#">Power banks</a>
+          <a href="#">Mobile Phone Chargers</a>
+          <a href="#">Car Chargers</a>
+      </div>
+          </div>
+  </div>
+</div>
+        </th>
+        <th><div class="dropdown">
+  <button class="dropbtn">LOGOUT</button>
+  <div class="dropdown-content">
+  <a href="{% url 'homepage' %}">Logout</a>
+  <!--a href="registerpage.html">Sign Up</a-->
+  </div>
+</div>
+
+    </tr>
+    </table>
+    <br>
+<table width="50%" height="50%" align="left">
+    <tr><td><img src="{% static 'leftslide2.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide3.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide4.png' %}" width="40%" height="50%"></td></tr>
+    <tr><td><img src="{% static 'leftslide1.png' %}" width="40%" height="50%"></td></tr>
+</table>
+<table width="50%" height="20%" align="right">
+    <tr><td align="right"><img src="{% static 'Ani_Mobi_items.gif' %}" width="55%" height="80%" border="5" ><br><br><br>
+    </td></tr>
+    <tr><td><img src="{% static 'mobileincart.jpg' %}" width="25%" height="20%" align="right"></td></tr>
+</table><br><br>
+
+</html>
