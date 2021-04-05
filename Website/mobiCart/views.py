@@ -9,10 +9,10 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.auth.hashers import make_password
 # from mobiCart.VideoCapture import VideoCam
 #from django.urls import reverse
-import csv
-import cv2
-import numpy as np
-import pandas as pd
+# import csv
+# import cv2
+# import numpy as np
+# import pandas as pd
 
 # Create your views here.
 
